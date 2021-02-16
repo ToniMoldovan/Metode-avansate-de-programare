@@ -2,6 +2,7 @@
 #include <fstream>
 #include <stdio.h>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -21,19 +22,7 @@ int main()
             count++;
         }
     }
-    for (int i = 0; i < count; i++)
-    {
-        for (int j = i; j < count - 1; j++)
-        {
-            string prop1 = linie[i], prop2 = linie[j];
-            if (prop1[0] > prop2[0])
-            {
-                string temp = linie[i];
-                linie[i] = linie[j];
-                linie[j] = temp;
-            }
-        }
-    }
+    sort(linie, linie + count);
     for (int i = 0; i < count; i++)
     {
         fiesire  << linie[i] << "\n";
