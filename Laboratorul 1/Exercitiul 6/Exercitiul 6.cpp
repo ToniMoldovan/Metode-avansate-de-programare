@@ -12,7 +12,7 @@ int main()
     fintrare.open("ex6in1.txt");
     finout.open("ex6in2.txt", ios::app);
     string linie1[512];
-    int count1 = 0, count2 = 0;
+    int count1 = 0;
     if (fintrare.is_open())
     {
         while (!fintrare.eof())
