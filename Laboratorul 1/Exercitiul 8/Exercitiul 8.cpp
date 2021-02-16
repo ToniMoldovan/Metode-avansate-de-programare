@@ -10,7 +10,6 @@ using namespace std;
 int main()
 {
     ifstream fintrare;
-    fstream finout;
     fintrare.open("ex8in.txt");
     string linie[512];
     int count = 0;
@@ -22,7 +21,6 @@ int main()
             count++;
         }
     }
-    finout << "\n";
     char cuvinte[512][256];
     int nrcuvinte = 0;
     for (int j = 0; j < count; j++)
@@ -52,7 +50,7 @@ int main()
     }
     cout << "Cel mai scurt cuvant gasit este: " << cuvinte[pozCuvantScurt]<<"\n";
     cout << "Cel mai lung cuvant gasit este: " << cuvinte[pozCuvantLung]<<"\n";
-    finout.close();
+    fintrare.close();
     system("pause");
     return 0;
 }
